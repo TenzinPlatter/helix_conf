@@ -20,3 +20,12 @@ formatter = {command = "clangd-format"}
 [[language]]
 name = "rust"
 auto-format = true
+
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["emmet-lsp"]
