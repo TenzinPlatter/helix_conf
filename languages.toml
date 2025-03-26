@@ -15,7 +15,7 @@ roots = [".git"]
 file-types = ["c", "h"]
 language-servers = [{name = "clangd"}]
 auto-format = true
-formatter = {command = "clangd-format"}
+formatter = {command = "clang-format"}
 
 [[language]]
 name = "rust"
@@ -29,3 +29,13 @@ args = ["--stdio"]
 name = "html"
 roots = [".git"]
 language-servers = ["emmet-lsp"]
+formatter = { command = "prettier", args = ["--parser", "html"]}
+auto-format = true
+
+[language.auto-pairs]
+"<" = ">"
+
+[[language]]
+name = "typescript"
+formatter = { command = "prettier", args = ["--parser", "typescript"]}
+auto-format = true
