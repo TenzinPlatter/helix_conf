@@ -28,14 +28,17 @@ enable = true
 focus-lost = true
 
 [keys.normal]
+C-l =  ["delete_selection", "move_next_word_start", "paste_after"]
+C-h = ["delete_selection", "move_prev_word_start", "paste_before"]
+
 C-u = ":wa"
-C-l = ["delete_selection", "paste_after"]
-C-h = ["delete_selection", "move_char_left", "paste_before"]
 Z = {Z = ":wqa"}
+
 X = ["extend_line_up", "extend_to_line_bounds"]
 A-x = ["extend_to_line_bounds"]
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
 C-y = [
   ":sh rm -f /tmp/yazi-path",
   ":insert-output yazi %{buffer_name}, --chooser-file=/tmp/yazi-path",
@@ -50,8 +53,11 @@ C-y = [
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]
 A-x = ["extend_to_line_bounds"]
+
 C-l = ["delete_selection", "paste_after"]
 C-h = ["delete_selection", "move_char_left", "paste_before"]
+C-S-l = ["delete_selection", "move_next_word_start", "paste_after"]
+C-S-h = ["delete_selection", "move_prev_word_start", "paste_before"]
 
 [keys.insert]
 C-h = "move_char_left"
