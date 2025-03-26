@@ -28,7 +28,9 @@ enable = true
 focus-lost = true
 
 [keys.normal]
-C-l = ":wa"
+C-u = ":wa"
+C-l = ["delete_selection", "paste_after"]
+C-h = ["delete_selection", "move_char_left", "paste_before"]
 Z = {Z = ":wqa"}
 X = ["extend_line_up", "extend_to_line_bounds"]
 A-x = ["extend_to_line_bounds"]
@@ -48,6 +50,8 @@ C-y = [
 [keys.select]
 X = ["extend_line_up", "extend_to_line_bounds"]
 A-x = ["extend_to_line_bounds"]
+C-l = ["delete_selection", "paste_after"]
+C-h = ["delete_selection", "move_char_left", "paste_before"]
 
 [keys.insert]
 C-h = "move_char_left"
