@@ -1,4 +1,9 @@
 [[language]]
+name = "markdown"
+file-types = ["md"]
+formatter = {command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[[language]]
 name = "python"
 scope = "source.python"
 roots = [".git"]
@@ -19,6 +24,7 @@ formatter = {command = "clang-format"}
 
 [[language]]
 name = "rust"
+roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 
 [language-server.emmet-lsp]
