@@ -1,7 +1,15 @@
+[language-server.rust-analyzer.config]
+files.watcher = "server"
+
 [[language]]
 name = "markdown"
 file-types = ["md"]
 formatter = {command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[[language]]
+name = "cpp"
+formatter = {command = "clang-format"}
+auto-format = true
 
 [[language]]
 name = "python"
