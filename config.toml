@@ -31,6 +31,11 @@ focus-lost = true
 C-l =  ["delete_selection", "paste_after"]
 C-h = ["delete_selection", "move_char_left", "paste_before"]
 
+'{' = "@[p"
+'}' = "@]p"
+'A-{' = "@[f"
+'A-}' = "@]f"
+
 C-u = ":wa"
 Z = {Z = ":wqa"}
 
